@@ -6,10 +6,10 @@ var app = express.createServer(express.logger());
 
 var readFile = function(fileName) {
   return buf.toString(fs.readFileSync(fileName));
-}
+};
 
 app.get('/', function(request, response) {
-  response.send(readFile('index.html');
+  response.send(readFile('index.html'));
 });
 
 var port = process.env.PORT || 5000;
